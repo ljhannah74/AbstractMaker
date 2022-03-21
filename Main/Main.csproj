@@ -129,6 +129,13 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExtLibs\Telerik.WinControls.dll" />
+    <Content Include="ExtLibs\Telerik.WinControls.GridView.dll" />
+    <Content Include="ExtLibs\Telerik.WinControls.RichTextEditor.dll" />
+    <Content Include="ExtLibs\Telerik.WinControls.UI.dll" />
+    <Content Include="ExtLibs\TelerikCommon.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
