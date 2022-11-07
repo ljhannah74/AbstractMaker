@@ -42,241 +42,355 @@ namespace AbstractMaker.Main
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "BuildTitleAbstract";
-			this.btnSaveFormData = new RadButton();
-			this.radSplitContainer = new RadSplitContainer();
-			this.splitPanel1 = new SplitPanel();
-			this.radPageView1 = new RadPageView();
-			this.pgMortgagesAndDeeds = new RadPageViewPage();
-			this.pgJudgmentLiens = new RadPageViewPage();
-			this.pgChainOfTitle = new RadPageViewPage();
-			this.pgTaxSheet = new RadPageViewPage();
-			this.pgLegalDescription = new RadPageViewPage();
-			this.splitPanel2 = new SplitPanel();
-			this.radStatusStrip1 = new RadStatusStrip();
-			this.radLabel1 = new RadLabel();
-			this.radLabel2 = new RadLabel();
-			this.radLabel5 = new RadLabel();
-			this.radLabel6 = new RadLabel();
-			this.tbLoanType = new RadTextBox();
-			this.tbLoanAmount = new RadTextBox();
-			this.tbFullAddress = new RadTextBox();
-			this.tbBorrowers = new RadTextBox();
-			this.rbShowFiles = new RadButton();
-			((ISupportInitialize)this.btnSaveFormData).BeginInit();
-			((ISupportInitialize)this.radSplitContainer).BeginInit();
-			this.radSplitContainer.SuspendLayout();
-			((ISupportInitialize)this.splitPanel1).BeginInit();
-			this.splitPanel1.SuspendLayout();
-			((ISupportInitialize)this.radPageView1).BeginInit();
-			this.radPageView1.SuspendLayout();
-			((ISupportInitialize)this.splitPanel2).BeginInit();
-			((ISupportInitialize)this.radStatusStrip1).BeginInit();
-			((ISupportInitialize)this.radLabel1).BeginInit();
-			((ISupportInitialize)this.radLabel2).BeginInit();
-			((ISupportInitialize)this.radLabel5).BeginInit();
-			((ISupportInitialize)this.radLabel6).BeginInit();
-			((ISupportInitialize)this.tbLoanType).BeginInit();
-			((ISupportInitialize)this.tbLoanAmount).BeginInit();
-			((ISupportInitialize)this.tbFullAddress).BeginInit();
-			((ISupportInitialize)this.tbBorrowers).BeginInit();
-			((ISupportInitialize)this.rbShowFiles).BeginInit();
-			((ISupportInitialize)this).BeginInit();
-			base.SuspendLayout();
-			this.btnSaveFormData.Location = new Point(884, 12);
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuildTitleAbstract));
+			this.btnSaveFormData = new Telerik.WinControls.UI.RadButton();
+			this.radSplitContainer = new Telerik.WinControls.UI.RadSplitContainer();
+			this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
+			this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
+			this.pgChainOfTitle = new Telerik.WinControls.UI.RadPageViewPage();
+			this._ucChainOfTitle = new AbstractMaker.Main.ucChainOfTitle();
+			this.pgLegalDescription = new Telerik.WinControls.UI.RadPageViewPage();
+			this.pgMortgagesAndDeeds = new Telerik.WinControls.UI.RadPageViewPage();
+			this.pgJudgmentLiens = new Telerik.WinControls.UI.RadPageViewPage();
+			this.pgTaxSheet = new Telerik.WinControls.UI.RadPageViewPage();
+			this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
+			this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+			this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+			this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+			this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+			this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+			this.tbLoanType = new Telerik.WinControls.UI.RadTextBox();
+			this.tbLoanAmount = new Telerik.WinControls.UI.RadTextBox();
+			this.tbFullAddress = new Telerik.WinControls.UI.RadTextBox();
+			this.tbBorrowers = new Telerik.WinControls.UI.RadTextBox();
+			this.rbShowFiles = new Telerik.WinControls.UI.RadButton();
+			((System.ComponentModel.ISupportInitialize)(this.btnSaveFormData)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radSplitContainer)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
+			this.pgChainOfTitle.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbLoanType)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbLoanAmount)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbFullAddress)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbBorrowers)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.rbShowFiles)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// btnSaveFormData
+			// 
+			this.btnSaveFormData.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btnSaveFormData.Location = new System.Drawing.Point(884, 12);
 			this.btnSaveFormData.Name = "btnSaveFormData";
-			this.btnSaveFormData.Size = new System.Drawing.Size(110, 24);
+			// 
+			// 
+			// 
+			this.btnSaveFormData.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 110, 24);
 			this.btnSaveFormData.TabIndex = 0;
 			this.btnSaveFormData.Text = "Save";
-			this.btnSaveFormData.Click += new EventHandler(this.btnSaveFormData_Click);
-			this.radSplitContainer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			this.btnSaveFormData.Click += new System.EventHandler(this.btnSaveFormData_Click);
+			// 
+			// radSplitContainer
+			// 
+			this.radSplitContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.radSplitContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.radSplitContainer.Controls.Add(this.splitPanel1);
 			this.radSplitContainer.Controls.Add(this.splitPanel2);
-			this.radSplitContainer.Location = new Point(0, 68);
+			this.radSplitContainer.Location = new System.Drawing.Point(0, 68);
 			this.radSplitContainer.Name = "radSplitContainer";
+			// 
+			// 
+			// 
+			this.radSplitContainer.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 200);
 			this.radSplitContainer.RootElement.MinSize = new System.Drawing.Size(25, 25);
-			this.radSplitContainer.Size = new System.Drawing.Size(1792, 873);
+			this.radSplitContainer.Size = new System.Drawing.Size(1604, 784);
 			this.radSplitContainer.TabIndex = 1;
 			this.radSplitContainer.TabStop = false;
+			// 
+			// splitPanel1
+			// 
+			this.splitPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.splitPanel1.Controls.Add(this.radPageView1);
-			this.splitPanel1.Location = new Point(0, 0);
+			this.splitPanel1.Location = new System.Drawing.Point(0, 0);
 			this.splitPanel1.Name = "splitPanel1";
+			// 
+			// 
+			// 
+			this.splitPanel1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 200);
 			this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-			this.splitPanel1.Size = new System.Drawing.Size(994, 873);
-			this.splitPanel1.SizeInfo.AutoSizeScale = new SizeF(0.05593222f, 0f);
+			this.splitPanel1.Size = new System.Drawing.Size(889, 784);
+			this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.05593222F, 0F);
 			this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(99, 0);
 			this.splitPanel1.TabIndex = 0;
 			this.splitPanel1.TabStop = false;
 			this.splitPanel1.Text = "splitPanel1";
+			// 
+			// radPageView1
+			// 
+			this.radPageView1.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.radPageView1.Controls.Add(this.pgChainOfTitle);
 			this.radPageView1.Controls.Add(this.pgLegalDescription);
 			this.radPageView1.Controls.Add(this.pgMortgagesAndDeeds);
 			this.radPageView1.Controls.Add(this.pgJudgmentLiens);
 			this.radPageView1.Controls.Add(this.pgTaxSheet);
-			this.radPageView1.Dock = DockStyle.Fill;
-			this.radPageView1.Location = new Point(0, 0);
+			this.radPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.radPageView1.Location = new System.Drawing.Point(0, 0);
 			this.radPageView1.Name = "radPageView1";
+			// 
+			// 
+			// 
+			this.radPageView1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 400, 300);
 			this.radPageView1.SelectedPage = this.pgChainOfTitle;
-			this.radPageView1.Size = new System.Drawing.Size(994, 873);
+			this.radPageView1.Size = new System.Drawing.Size(889, 784);
 			this.radPageView1.TabIndex = 0;
-			this.radPageView1.SelectedPageChanged += new EventHandler(this.radPageView1_SelectedPageChanged);
-			((RadPageViewStripElement)this.radPageView1.GetChildAt(0)).ItemDragMode = PageViewItemDragMode.None;
-			this.pgMortgagesAndDeeds.ItemSize = new SizeF(129f, 28f);
-			this.pgMortgagesAndDeeds.Location = new Point(10, 37);
-			this.pgMortgagesAndDeeds.Name = "pgMortgagesAndDeeds";
-			this.pgMortgagesAndDeeds.Size = new System.Drawing.Size(973, 825);
-			this.pgMortgagesAndDeeds.Text = "Cur. Mortgages/Deeds";
-			this.pgJudgmentLiens.ItemSize = new SizeF(123f, 28f);
-			this.pgJudgmentLiens.Location = new Point(10, 37);
-			this.pgJudgmentLiens.Name = "pgJudgmentLiens";
-			this.pgJudgmentLiens.Size = new System.Drawing.Size(973, 825);
-			this.pgJudgmentLiens.Text = "Cur. Judgments/Liens";
-			this.pgChainOfTitle.ItemSize = new SizeF(82f, 28f);
-			this.pgChainOfTitle.Location = new Point(10, 37);
+			this.radPageView1.SelectedPageChanged += new System.EventHandler(this.radPageView1_SelectedPageChanged);
+			// 
+			// pgChainOfTitle
+			// 
+			this.pgChainOfTitle.Controls.Add(this._ucChainOfTitle);
+			this.pgChainOfTitle.ItemSize = new System.Drawing.SizeF(82F, 28F);
+			this.pgChainOfTitle.Location = new System.Drawing.Point(10, 37);
 			this.pgChainOfTitle.Name = "pgChainOfTitle";
-			this.pgChainOfTitle.Size = new System.Drawing.Size(1047, 859);
+			this.pgChainOfTitle.Size = new System.Drawing.Size(868, 736);
 			this.pgChainOfTitle.Text = "Chain of Title";
-			this.pgTaxSheet.ItemSize = new SizeF(64f, 28f);
-			this.pgTaxSheet.Location = new Point(10, 37);
-			this.pgTaxSheet.Name = "pgTaxSheet";
-			this.pgTaxSheet.Size = new System.Drawing.Size(973, 825);
-			this.pgTaxSheet.Text = "Tax Sheet";
-			this.pgLegalDescription.ItemSize = new SizeF(70f, 28f);
-			this.pgLegalDescription.Location = new Point(10, 37);
+			// 
+			// _ucChainOfTitle
+			// 
+			this._ucChainOfTitle.Location = new System.Drawing.Point(0, 0);
+			this._ucChainOfTitle.Name = "_ucChainOfTitle";
+			this._ucChainOfTitle.PB_Title_Chain = false;
+			this._ucChainOfTitle.Size = new System.Drawing.Size(1047, 859);
+			this._ucChainOfTitle.TabIndex = 0;
+			// 
+			// pgLegalDescription
+			// 
+			this.pgLegalDescription.ItemSize = new System.Drawing.SizeF(70F, 28F);
+			this.pgLegalDescription.Location = new System.Drawing.Point(10, 37);
 			this.pgLegalDescription.Name = "pgLegalDescription";
 			this.pgLegalDescription.Size = new System.Drawing.Size(973, 825);
 			this.pgLegalDescription.Text = "Legal Desc";
-			this.splitPanel2.Location = new Point(998, 0);
+			// 
+			// pgMortgagesAndDeeds
+			// 
+			this.pgMortgagesAndDeeds.ItemSize = new System.Drawing.SizeF(129F, 28F);
+			this.pgMortgagesAndDeeds.Location = new System.Drawing.Point(10, 37);
+			this.pgMortgagesAndDeeds.Name = "pgMortgagesAndDeeds";
+			this.pgMortgagesAndDeeds.Size = new System.Drawing.Size(973, 825);
+			this.pgMortgagesAndDeeds.Text = "Cur. Mortgages/Deeds";
+			// 
+			// pgJudgmentLiens
+			// 
+			this.pgJudgmentLiens.ItemSize = new System.Drawing.SizeF(123F, 28F);
+			this.pgJudgmentLiens.Location = new System.Drawing.Point(10, 37);
+			this.pgJudgmentLiens.Name = "pgJudgmentLiens";
+			this.pgJudgmentLiens.Size = new System.Drawing.Size(973, 825);
+			this.pgJudgmentLiens.Text = "Cur. Judgments/Liens";
+			// 
+			// pgTaxSheet
+			// 
+			this.pgTaxSheet.ItemSize = new System.Drawing.SizeF(64F, 28F);
+			this.pgTaxSheet.Location = new System.Drawing.Point(10, 37);
+			this.pgTaxSheet.Name = "pgTaxSheet";
+			this.pgTaxSheet.Size = new System.Drawing.Size(973, 825);
+			this.pgTaxSheet.Text = "Tax Sheet";
+			// 
+			// splitPanel2
+			// 
+			this.splitPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.splitPanel2.Location = new System.Drawing.Point(893, 0);
 			this.splitPanel2.Name = "splitPanel2";
+			// 
+			// 
+			// 
+			this.splitPanel2.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 200);
 			this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-			this.splitPanel2.Size = new System.Drawing.Size(794, 873);
-			this.splitPanel2.SizeInfo.AutoSizeScale = new SizeF(-0.05593219f, 0f);
+			this.splitPanel2.Size = new System.Drawing.Size(711, 784);
+			this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.05593219F, 0F);
 			this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(-99, 0);
 			this.splitPanel2.TabIndex = 1;
 			this.splitPanel2.TabStop = false;
 			this.splitPanel2.Text = "splitPanel2";
-			this.radStatusStrip1.Location = new Point(0, 944);
+			// 
+			// radStatusStrip1
+			// 
+			this.radStatusStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.radStatusStrip1.Location = new System.Drawing.Point(0, 855);
 			this.radStatusStrip1.Name = "radStatusStrip1";
-			this.radStatusStrip1.Size = new System.Drawing.Size(1792, 26);
+			// 
+			// 
+			// 
+			this.radStatusStrip1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 300, 24);
+			this.radStatusStrip1.RootElement.StretchVertically = true;
+			this.radStatusStrip1.Size = new System.Drawing.Size(1604, 26);
 			this.radStatusStrip1.TabIndex = 2;
-			this.radLabel1.Location = new Point(12, 12);
+			// 
+			// radLabel1
+			// 
+			this.radLabel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.radLabel1.Location = new System.Drawing.Point(12, 12);
 			this.radLabel1.Name = "radLabel1";
+			// 
+			// 
+			// 
+			this.radLabel1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 18);
 			this.radLabel1.Size = new System.Drawing.Size(60, 18);
 			this.radLabel1.TabIndex = 3;
 			this.radLabel1.Text = "Loan Type:";
-			this.radLabel2.Location = new Point(12, 36);
+			// 
+			// radLabel2
+			// 
+			this.radLabel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.radLabel2.Location = new System.Drawing.Point(12, 36);
 			this.radLabel2.Name = "radLabel2";
+			// 
+			// 
+			// 
+			this.radLabel2.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 18);
 			this.radLabel2.Size = new System.Drawing.Size(76, 18);
 			this.radLabel2.TabIndex = 4;
 			this.radLabel2.Text = "Loan Amount:";
-			this.radLabel5.Location = new Point(242, 36);
+			// 
+			// radLabel5
+			// 
+			this.radLabel5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.radLabel5.Location = new System.Drawing.Point(242, 36);
 			this.radLabel5.Name = "radLabel5";
+			// 
+			// 
+			// 
+			this.radLabel5.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 18);
 			this.radLabel5.Size = new System.Drawing.Size(66, 18);
 			this.radLabel5.TabIndex = 8;
 			this.radLabel5.Text = "Borrower(s):";
-			this.radLabel6.Location = new Point(242, 12);
+			// 
+			// radLabel6
+			// 
+			this.radLabel6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.radLabel6.Location = new System.Drawing.Point(242, 12);
 			this.radLabel6.Name = "radLabel6";
+			// 
+			// 
+			// 
+			this.radLabel6.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 18);
 			this.radLabel6.Size = new System.Drawing.Size(69, 18);
 			this.radLabel6.TabIndex = 7;
 			this.radLabel6.Text = "Full Address:";
-			this.tbLoanType.Location = new Point(102, 11);
+			// 
+			// tbLoanType
+			// 
+			this.tbLoanType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.tbLoanType.Location = new System.Drawing.Point(102, 11);
 			this.tbLoanType.Name = "tbLoanType";
 			this.tbLoanType.ReadOnly = true;
+			// 
+			// 
+			// 
+			this.tbLoanType.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 20);
+			this.tbLoanType.RootElement.StretchVertically = true;
 			this.tbLoanType.Size = new System.Drawing.Size(125, 20);
 			this.tbLoanType.TabIndex = 11;
-			this.tbLoanAmount.Location = new Point(102, 35);
+			// 
+			// tbLoanAmount
+			// 
+			this.tbLoanAmount.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.tbLoanAmount.Location = new System.Drawing.Point(102, 35);
 			this.tbLoanAmount.Name = "tbLoanAmount";
 			this.tbLoanAmount.ReadOnly = true;
+			// 
+			// 
+			// 
+			this.tbLoanAmount.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 20);
+			this.tbLoanAmount.RootElement.StretchVertically = true;
 			this.tbLoanAmount.Size = new System.Drawing.Size(125, 20);
 			this.tbLoanAmount.TabIndex = 12;
-			this.tbFullAddress.Location = new Point(332, 11);
+			// 
+			// tbFullAddress
+			// 
+			this.tbFullAddress.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.tbFullAddress.Location = new System.Drawing.Point(332, 11);
 			this.tbFullAddress.Name = "tbFullAddress";
 			this.tbFullAddress.ReadOnly = true;
+			// 
+			// 
+			// 
+			this.tbFullAddress.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 20);
+			this.tbFullAddress.RootElement.StretchVertically = true;
 			this.tbFullAddress.Size = new System.Drawing.Size(400, 20);
 			this.tbFullAddress.TabIndex = 13;
-			this.tbBorrowers.Location = new Point(332, 35);
+			// 
+			// tbBorrowers
+			// 
+			this.tbBorrowers.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.tbBorrowers.Location = new System.Drawing.Point(332, 35);
 			this.tbBorrowers.Name = "tbBorrowers";
 			this.tbBorrowers.ReadOnly = true;
+			// 
+			// 
+			// 
+			this.tbBorrowers.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 100, 20);
+			this.tbBorrowers.RootElement.StretchVertically = true;
 			this.tbBorrowers.Size = new System.Drawing.Size(400, 20);
 			this.tbBorrowers.TabIndex = 14;
-			this.rbShowFiles.Location = new Point(1022, 12);
+			// 
+			// rbShowFiles
+			// 
+			this.rbShowFiles.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.rbShowFiles.Location = new System.Drawing.Point(1022, 12);
 			this.rbShowFiles.Name = "rbShowFiles";
-			this.rbShowFiles.Size = new System.Drawing.Size(110, 24);
+			// 
+			// 
+			// 
+			this.rbShowFiles.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 110, 24);
 			this.rbShowFiles.TabIndex = 15;
 			this.rbShowFiles.Text = "Show Files";
-			this.rbShowFiles.Click += new EventHandler(this.rbShowFiles_Click);
-			base.AutoScaleDimensions = new SizeF(6f, 13f);
-			base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			base.ClientSize = new System.Drawing.Size(1792, 970);
-			base.Controls.Add(this.rbShowFiles);
-			base.Controls.Add(this.tbBorrowers);
-			base.Controls.Add(this.tbFullAddress);
-			base.Controls.Add(this.tbLoanAmount);
-			base.Controls.Add(this.tbLoanType);
-			base.Controls.Add(this.radLabel5);
-			base.Controls.Add(this.radLabel6);
-			base.Controls.Add(this.radLabel2);
-			base.Controls.Add(this.radLabel1);
-			base.Controls.Add(this.btnSaveFormData);
-			base.Controls.Add(this.radStatusStrip1);
-			base.Controls.Add(this.radSplitContainer);
-			base.Name = "BuildTitleCommitment";
-			base.RootElement.ApplyShapeToControl = true;
+			this.rbShowFiles.Click += new System.EventHandler(this.rbShowFiles_Click);
+			// 
+			// BuildTitleAbstract
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1604, 881);
+			this.Controls.Add(this.rbShowFiles);
+			this.Controls.Add(this.tbBorrowers);
+			this.Controls.Add(this.tbFullAddress);
+			this.Controls.Add(this.tbLoanAmount);
+			this.Controls.Add(this.tbLoanType);
+			this.Controls.Add(this.radLabel5);
+			this.Controls.Add(this.radLabel6);
+			this.Controls.Add(this.radLabel2);
+			this.Controls.Add(this.radLabel1);
+			this.Controls.Add(this.btnSaveFormData);
+			this.Controls.Add(this.radStatusStrip1);
+			this.Controls.Add(this.radSplitContainer);
+			this.Name = "BuildTitleAbstract";
 			this.Text = "Build Title Commitment";
-			ucChainOfTitle _ucChainOfTitle = new ucChainOfTitle()
-			{
-				Dock = DockStyle.Fill
-			};
-			this.pgChainOfTitle.Controls.Add(_ucChainOfTitle);
+			this.Load += new System.EventHandler(this.BuildTitleAbstract_Load);
+			((System.ComponentModel.ISupportInitialize)(this.btnSaveFormData)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radSplitContainer)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
+			this.pgChainOfTitle.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbLoanType)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbLoanAmount)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbFullAddress)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tbBorrowers)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.rbShowFiles)).EndInit();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
-			ucLegalDescription _ucLegalDescription = new ucLegalDescription(LEGAL_DESCRIPTION)
-			{
-				Dock = DockStyle.Fill
-			};
-			this.pgLegalDescription.Controls.Add(_ucLegalDescription);
-			ucMortgageOrDeed _ucMortgageOrDeed = new ucMortgageOrDeed(mORTGAGES)
-			{
-				Dock = DockStyle.Fill
-			};
-			this.pgMortgagesAndDeeds.Controls.Add(_ucMortgageOrDeed);
-
-			ucTaxSheet TaxSheetPnl = new ucTaxSheet(this.TaxSheet)
-			{
-				Dock = DockStyle.Fill
-			};
-			this.pgTaxSheet.Controls.Add((Control)TaxSheetPnl);
-
-			ucJudgmentLiens _ucJudgmentLiens = new ucJudgmentLiens(this.judgmentLiens)
-			{
-				Dock = DockStyle.Fill
-			};
-			this.pgJudgmentLiens.Controls.Add(_ucJudgmentLiens);
-
-			//base.Shown += new EventHandler(this.GetTitleCommitment_Shown);
-			((ISupportInitialize)this.btnSaveFormData).EndInit();
-			((ISupportInitialize)this.radSplitContainer).EndInit();
-			this.radSplitContainer.ResumeLayout(false);
-			((ISupportInitialize)this.splitPanel1).EndInit();
-			this.splitPanel1.ResumeLayout(false);
-			((ISupportInitialize)this.radPageView1).EndInit();
-			this.radPageView1.ResumeLayout(false);
-			((ISupportInitialize)this.splitPanel2).EndInit();
-			((ISupportInitialize)this.radStatusStrip1).EndInit();
-			((ISupportInitialize)this.radLabel1).EndInit();
-			((ISupportInitialize)this.radLabel2).EndInit();
-			((ISupportInitialize)this.radLabel5).EndInit();
-			((ISupportInitialize)this.radLabel6).EndInit();
-			((ISupportInitialize)this.tbLoanType).EndInit();
-			((ISupportInitialize)this.tbLoanAmount).EndInit();
-			((ISupportInitialize)this.tbFullAddress).EndInit();
-			((ISupportInitialize)this.tbBorrowers).EndInit();
-			((ISupportInitialize)this.rbShowFiles).EndInit();
-			((ISupportInitialize)this).EndInit();
-			base.ResumeLayout(false);
-			base.PerformLayout();
 		}
 
 		#endregion
@@ -334,5 +448,6 @@ namespace AbstractMaker.Main
 		private TAX_SHEET TaxSheet = new TAX_SHEET();
 
 		private JUDGMENTLIENS judgmentLiens = new JUDGMENTLIENS();
+		private ucChainOfTitle _ucChainOfTitle;
 	}
 }

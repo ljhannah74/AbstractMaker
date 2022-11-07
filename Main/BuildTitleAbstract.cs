@@ -13,7 +13,7 @@ using Telerik.WinControls.UI;
 
 namespace AbstractMaker.Main
 {
-	public partial class BuildTitleAbstract : RadForm
+	public partial class BuildTitleAbstract : Form
 	{
 		public BuildTitleAbstract()
 		{
@@ -31,6 +31,9 @@ namespace AbstractMaker.Main
 
 		private void btnSaveFormData_Click(object sender, EventArgs e) { }
 
+		private void BuildTitleAbstract_Load(object sender, EventArgs e)
+		{
 
+		}
 	}
 }
