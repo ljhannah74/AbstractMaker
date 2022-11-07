@@ -58,14 +58,21 @@
     <Compile Include="BusinessAPICalls.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Deed.cs" />
+    <Compile Include="Judgment.cs" />
+    <Compile Include="JUDGMENTLIENS.cs" />
+    <Compile Include="Legal_Description.cs" />
     <Compile Include="Migrations\202110061811118_ClientV1.cs" />
     <Compile Include="Migrations\202110061811118_ClientV1.designer.cs">
       <DependentUpon>202110061811118_ClientV1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mortgage.cs" />
+    <Compile Include="PolicyType.cs" />
     <Compile Include="ProductType.cs" />
     <Compile Include="Property.cs" />
+    <Compile Include="TaxSheet.cs" />
+    <Compile Include="TaxSheetUtilities.cs" />
+    <Compile Include="TAX_SHEET.cs" />
     <Compile Include="TitleAbstract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

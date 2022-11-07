@@ -34,48 +34,25 @@ namespace AbstractMaker.Main
 		private void InitializeComponent()
 		{
 			TableViewDefinition tableViewDefinition2 = new TableViewDefinition();
-			this.Label3 = new RadLabel();
-			this.Label2 = new RadLabel();
-			this.cddCustomerAccounts = new RadCheckedListBox();
-			this.cddBusinessProducts = new RadCheckedListBox();
-			this.btnJumpToAbstractBuildForOrder = new RadButton();
-			this.tbOrderNumber = new RadTextBox();
-			this.PageView = new RadPageView();
-			this.pgOrders = new RadPageViewPage();
-			this.GroupBox2 = new RadGroupBox();
-			this.Label1 = new RadLabel();
-			this.GroupBox1 = new RadGroupBox();
-			this.btnRefreshOrderList = new RadButton();
-			this.Label4 = new RadLabel();
-			this.cddOrderStatuses = new RadCheckedListBox();
-			this.MasterTemplate = new RadGridView();
-			this.dtpStart = new RadDateTimePicker();
-			this.dtpEnd = new RadDateTimePicker();
+			this.Label3 = new Label();
+			this.Label2 = new Label();
+			this.cddCustomerAccounts = new CheckedListBox();
+			this.cddBusinessProducts = new CheckedListBox();
+			this.btnJumpToAbstractBuildForOrder = new Button();
+			this.tbOrderNumber = new TextBox();
+			this.PageView = new TabControl();
+			this.pgOrders = new TabPage();
+			this.GroupBox2 = new GroupBox();
+			this.Label1 = new Label();
+			this.GroupBox1 = new GroupBox();
+			this.btnRefreshOrderList = new Button();
+			this.Label4 = new Label();
+			this.cddOrderStatuses = new CheckedListBox();
+			this.MasterTemplate = new DataGrid();
+			this.dtpStart = new DateTimePicker();
+			this.dtpEnd = new DateTimePicker();
 			this.btnCreateNewOrder = new Button();
-			((System.ComponentModel.ISupportInitialize)(this.Label3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.Label2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddCustomerAccounts)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddBusinessProducts)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnJumpToAbstractBuildForOrder)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tbOrderNumber)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.PageView)).BeginInit();
-			this.PageView.SuspendLayout();
-			this.pgOrders.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).BeginInit();
-			this.GroupBox2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.Label1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
-			this.GroupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.btnRefreshOrderList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.Label4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddOrderStatuses)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtpStart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).BeginInit();
-			//((System.ComponentModel.ISupportInitialize)(this.btnCreateNewOrder)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-			this.SuspendLayout();
+			
 			// 
 			// Label3
 			// 
@@ -132,7 +109,7 @@ namespace AbstractMaker.Main
 			this.PageView.Controls.Add(this.pgOrders);
 			this.PageView.Location = new System.Drawing.Point(0, 26);
 			this.PageView.Name = "PageView";
-			this.PageView.SelectedPage = this.pgOrders;
+			this.PageView.SelectedTab = this.pgOrders;
 			this.PageView.Size = new System.Drawing.Size(1250, 555);
 			this.PageView.TabIndex = 28;
 			// 
@@ -142,7 +119,7 @@ namespace AbstractMaker.Main
 			this.pgOrders.Controls.Add(this.GroupBox2);
 			this.pgOrders.Controls.Add(this.GroupBox1);
 			this.pgOrders.Controls.Add(this.MasterTemplate);
-			this.pgOrders.ItemSize = new System.Drawing.SizeF(50F, 28F);
+			//this.pgOrders.ItemSize = new System.Drawing.SizeF(50F, 28F);
 			this.pgOrders.Location = new System.Drawing.Point(10, 37);
 			this.pgOrders.Name = "pgOrders";
 			this.pgOrders.Size = new System.Drawing.Size(1229, 507);
@@ -154,7 +131,7 @@ namespace AbstractMaker.Main
 			this.GroupBox2.Controls.Add(this.Label1);
 			this.GroupBox2.Controls.Add(this.tbOrderNumber);
 			this.GroupBox2.Controls.Add(this.btnJumpToAbstractBuildForOrder);
-			this.GroupBox2.HeaderText = "Jump To Order";
+			//this.GroupBox2.HeaderText = "Jump To Order";
 			this.GroupBox2.Location = new System.Drawing.Point(3, 317);
 			this.GroupBox2.Name = "GroupBox2";
 			this.GroupBox2.Size = new System.Drawing.Size(275, 100);
@@ -179,7 +156,7 @@ namespace AbstractMaker.Main
 			this.GroupBox1.Controls.Add(this.cddBusinessProducts);
 			this.GroupBox1.Controls.Add(this.Label3);
 			this.GroupBox1.Controls.Add(this.cddCustomerAccounts);
-			this.GroupBox1.HeaderText = "Filters";
+			//this.GroupBox1.HeaderText = "Filters";
 			this.GroupBox1.Location = new System.Drawing.Point(2, 3);
 			this.GroupBox1.Name = "GroupBox1";
 			this.GroupBox1.Size = new System.Drawing.Size(275, 303);
@@ -207,7 +184,7 @@ namespace AbstractMaker.Main
 			// 
 			this.cddOrderStatuses.Location = new System.Drawing.Point(5, 145);
 			this.cddOrderStatuses.MaximumSize = new System.Drawing.Size(265, 40);
-			this.cddOrderStatuses.MultiSelect = true;
+			//this.cddOrderStatuses.MultiSelect = true;
 			this.cddOrderStatuses.Name = "cddOrderStatuses";
 			this.cddOrderStatuses.Size = new System.Drawing.Size(265, 20);
 			this.cddOrderStatuses.TabIndex = 23;
@@ -220,9 +197,9 @@ namespace AbstractMaker.Main
 			// 
 			// 
 			// 
-			this.MasterTemplate.MasterTemplate.AllowAddNewRow = false;
-			this.MasterTemplate.MasterTemplate.AllowColumnReorder = false;
-			this.MasterTemplate.MasterTemplate.ViewDefinition = tableViewDefinition2;
+			//this.MasterTemplate.MasterTemplate.AllowAddNewRow = false;
+			//this.MasterTemplate.MasterTemplate.AllowColumnReorder = false;
+			//this.MasterTemplate.MasterTemplate.ViewDefinition = tableViewDefinition2;
 			this.MasterTemplate.Name = "MasterTemplate";
 			this.MasterTemplate.ReadOnly = true;
 			this.MasterTemplate.Size = new System.Drawing.Size(669, 461);
@@ -274,54 +251,29 @@ namespace AbstractMaker.Main
 			//this.RootElement.ApplyShapeToControl = true;
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
-			((System.ComponentModel.ISupportInitialize)(this.Label3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.Label2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddCustomerAccounts)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddBusinessProducts)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnJumpToAbstractBuildForOrder)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tbOrderNumber)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.PageView)).EndInit();
-			this.PageView.ResumeLayout(false);
-			this.pgOrders.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).EndInit();
-			this.GroupBox2.ResumeLayout(false);
-			this.GroupBox2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.Label1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).EndInit();
-			this.GroupBox1.ResumeLayout(false);
-			this.GroupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.btnRefreshOrderList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.Label4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cddOrderStatuses)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtpStart)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).EndInit();
-			//((System.ComponentModel.ISupportInitialize)(this.btnCreateNewOrder)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
-			this.ResumeLayout(false);
+	
 
 		}
 
 		#endregion
 
-		private RadLabel Label3;
-		private RadLabel Label2;
-		private RadCheckedListBox cddCustomerAccounts;
-		private RadCheckedListBox cddBusinessProducts;
-		private RadButton btnJumpToAbstractBuildForOrder;
-		private RadTextBox tbOrderNumber;
-		private RadPageView PageView;
-		private RadPageViewPage pgOrders;
-		private RadGroupBox GroupBox2;
-		private RadLabel Label1;
-		private RadGroupBox GroupBox1;
-		private RadButton btnRefreshOrderList;
-		private RadLabel Label4;
-		private RadCheckedListBox cddOrderStatuses;
-		private RadDateTimePicker dtpEnd;
-		private RadDateTimePicker dtpStart;
-		private RadGridView MasterTemplate;
+		private Label Label3;
+		private Label Label2;
+		private CheckedListBox cddCustomerAccounts;
+		private CheckedListBox cddBusinessProducts;
+		private Button btnJumpToAbstractBuildForOrder;
+		private TextBox tbOrderNumber;
+		private TabControl PageView;
+		private TabPage pgOrders;
+		private GroupBox GroupBox2;
+		private Label Label1;
+		private GroupBox GroupBox1;
+		private Button btnRefreshOrderList;
+		private Label Label4;
+		private CheckedListBox cddOrderStatuses;
+		private DateTimePicker dtpEnd;
+		private DateTimePicker dtpStart;
+		private DataGrid MasterTemplate;
 		private Button btnCreateNewOrder;
 	}
 }

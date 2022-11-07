@@ -12,7 +12,7 @@ using AbstractMaker.Model;
 
 namespace AbstractMaker.Main
 {
-	public partial class Form1 : RadForm
+	public partial class Form1 : Form
 	{
 		public Form1()
 		{

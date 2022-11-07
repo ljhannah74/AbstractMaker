@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AbstractMaker.Model;
 
 
 namespace AbstractMaker.Main
@@ -110,11 +111,11 @@ namespace AbstractMaker.Main
 			this.splitPanel1.TabIndex = 0;
 			this.splitPanel1.TabStop = false;
 			this.splitPanel1.Text = "splitPanel1";
+			this.radPageView1.Controls.Add(this.pgChainOfTitle);
+			this.radPageView1.Controls.Add(this.pgLegalDescription);
 			this.radPageView1.Controls.Add(this.pgMortgagesAndDeeds);
 			this.radPageView1.Controls.Add(this.pgJudgmentLiens);
-			this.radPageView1.Controls.Add(this.pgChainOfTitle);
 			this.radPageView1.Controls.Add(this.pgTaxSheet);
-			this.radPageView1.Controls.Add(this.pgLegalDescription);
 			this.radPageView1.Dock = DockStyle.Fill;
 			this.radPageView1.Location = new Point(0, 0);
 			this.radPageView1.Name = "radPageView1";
@@ -230,11 +231,30 @@ namespace AbstractMaker.Main
 				Dock = DockStyle.Fill
 			};
 			this.pgChainOfTitle.Controls.Add(_ucChainOfTitle);
-		/*	ucMortgageOrDeed _ucMortgageOrDeed = new ucMortgageOrDeed()
+
+			ucLegalDescription _ucLegalDescription = new ucLegalDescription(LEGAL_DESCRIPTION)
 			{
 				Dock = DockStyle.Fill
 			};
-			this.pgMortgagesAndDeeds.Controls.Add(_ucMortgageOrDeed);*/
+			this.pgLegalDescription.Controls.Add(_ucLegalDescription);
+			ucMortgageOrDeed _ucMortgageOrDeed = new ucMortgageOrDeed(mORTGAGES)
+			{
+				Dock = DockStyle.Fill
+			};
+			this.pgMortgagesAndDeeds.Controls.Add(_ucMortgageOrDeed);
+
+			ucTaxSheet TaxSheetPnl = new ucTaxSheet(this.TaxSheet)
+			{
+				Dock = DockStyle.Fill
+			};
+			this.pgTaxSheet.Controls.Add((Control)TaxSheetPnl);
+
+			ucJudgmentLiens _ucJudgmentLiens = new ucJudgmentLiens(this.judgmentLiens)
+			{
+				Dock = DockStyle.Fill
+			};
+			this.pgJudgmentLiens.Controls.Add(_ucJudgmentLiens);
+
 			//base.Shown += new EventHandler(this.GetTitleCommitment_Shown);
 			((ISupportInitialize)this.btnSaveFormData).EndInit();
 			((ISupportInitialize)this.radSplitContainer).EndInit();
@@ -301,5 +321,18 @@ namespace AbstractMaker.Main
 		private RadPageViewPage pgLegalDescription;
 
 		private RadButton rbShowFiles;
+
+		private Legal_Description LEGAL_DESCRIPTION = new Legal_Description()
+		{
+			Text = "",
+			TaxID = "",
+			PB_Legal_Description = true
+		};
+
+		private List<Mortgage> mORTGAGES = new List<Mortgage>();
+
+		private TAX_SHEET TaxSheet = new TAX_SHEET();
+
+		private JUDGMENTLIENS judgmentLiens = new JUDGMENTLIENS();
 	}
 }
