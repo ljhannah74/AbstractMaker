@@ -114,16 +114,8 @@ namespace AbstractMaker.Main
 
 		private RadButton btnRemoveGrantee;
 
-		public bool PB_Title_Chain
-		{
-			get;
-			set;
-		}
+		public bool PB_Title_Chain;
 
-		public List<Deed> Title_Chain
-		{
-			get;
-			set;
-		}
+		public List<Deed> Title_Chain;
 	}
 }

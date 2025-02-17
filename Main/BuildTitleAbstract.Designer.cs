@@ -34,13 +34,71 @@ namespace AbstractMaker.Main
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        private RadSplitContainer radSplitContainer;
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
+        private SplitPanel splitPanel1;
+
+        private SplitPanel splitPanel2;
+
+        private RadStatusStrip radStatusStrip1;
+
+        private RadButton btnSaveFormData;
+
+        private RadLabel radLabel1;
+
+        private RadLabel radLabel2;
+
+        private RadLabel radLabel5;
+
+        private RadLabel radLabel6;
+
+        private RadTextBox tbLoanType;
+
+        private RadTextBox tbLoanAmount;
+
+        private RadTextBox tbFullAddress;
+
+        private RadTextBox tbBorrowers;
+
+        private RadPageView radPageView1;
+
+
+        private RadPageViewPage pgMortgagesAndDeeds;
+
+        private RadPageViewPage pgJudgmentLiens;
+
+        private RadPageViewPage pgChainOfTitle;
+
+        private RadPageViewPage pgTaxSheet;
+
+        private RadPageViewPage pgLegalDescription;
+
+        private RadButton rbShowFiles;
+
+        private Legal_Description LEGAL_DESCRIPTION = new Legal_Description()
+        {
+            Text = "",
+            TaxID = "",
+            PB_Legal_Description = true
+        };
+
+        private List<Mortgage> mORTGAGES = new List<Mortgage>();
+
+        private TAX_SHEET TaxSheet = new TAX_SHEET();
+
+        private JUDGMENTLIENS judgmentLiens = new JUDGMENTLIENS();
+        private ucChainOfTitle _ucChainOfTitle;
+        private ucLegalDescription _ucLegalDescription;
+        private ucMortgageOrDeed _ucMortgageOrDeed;
+        private ucTaxSheet _ucTaxSheet;
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuildTitleAbstract));
 			this.btnSaveFormData = new Telerik.WinControls.UI.RadButton();
@@ -49,6 +107,9 @@ namespace AbstractMaker.Main
 			this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
 			this.pgChainOfTitle = new Telerik.WinControls.UI.RadPageViewPage();
 			this._ucChainOfTitle = new AbstractMaker.Main.ucChainOfTitle();
+			this._ucLegalDescription = new AbstractMaker.Main.ucLegalDescription();
+			this._ucMortgageOrDeed = new AbstractMaker.Main.ucMortgageOrDeed();
+			this._ucTaxSheet = new AbstractMaker.Main.ucTaxSheet(this.TaxSheet);
 			this.pgLegalDescription = new Telerik.WinControls.UI.RadPageViewPage();
 			this.pgMortgagesAndDeeds = new Telerik.WinControls.UI.RadPageViewPage();
 			this.pgJudgmentLiens = new Telerik.WinControls.UI.RadPageViewPage();
@@ -168,9 +229,17 @@ namespace AbstractMaker.Main
 			this._ucChainOfTitle.PB_Title_Chain = false;
 			this._ucChainOfTitle.Size = new System.Drawing.Size(1047, 859);
 			this._ucChainOfTitle.TabIndex = 0;
-			// 
-			// pgLegalDescription
-			// 
+            //
+            // _ucLegalDescription
+            //
+            this._ucLegalDescription.Location = new System.Drawing.Point(0, 0);
+            this._ucLegalDescription.Name = "_ucLegalDescription";
+            this._ucLegalDescription.Size = new System.Drawing.Size(1047, 859);
+            this._ucLegalDescription.TabIndex = 0;
+            // 
+            // pgLegalDescription
+            // 
+            this.pgLegalDescription.Controls.Add(this._ucLegalDescription);
 			this.pgLegalDescription.ItemSize = new System.Drawing.SizeF(70F, 28F);
 			this.pgLegalDescription.Location = new System.Drawing.Point(10, 37);
 			this.pgLegalDescription.Name = "pgLegalDescription";
@@ -179,11 +248,19 @@ namespace AbstractMaker.Main
 			// 
 			// pgMortgagesAndDeeds
 			// 
+			this.pgMortgagesAndDeeds.Controls.Add(this._ucMortgageOrDeed);
 			this.pgMortgagesAndDeeds.ItemSize = new System.Drawing.SizeF(129F, 28F);
 			this.pgMortgagesAndDeeds.Location = new System.Drawing.Point(10, 37);
 			this.pgMortgagesAndDeeds.Name = "pgMortgagesAndDeeds";
 			this.pgMortgagesAndDeeds.Size = new System.Drawing.Size(973, 825);
 			this.pgMortgagesAndDeeds.Text = "Cur. Mortgages/Deeds";
+			//
+			// _ucMortgageOrDeed
+			//
+			this._ucMortgageOrDeed.Location = new System.Drawing.Point(0,0);
+			this._ucMortgageOrDeed.Name = "_ucMortgageOrDeed";
+			this._ucMortgageOrDeed.Size = new System.Drawing.Size(973, 825);
+			this._ucMortgageOrDeed.TabIndex = 0;
 			// 
 			// pgJudgmentLiens
 			// 
@@ -195,15 +272,23 @@ namespace AbstractMaker.Main
 			// 
 			// pgTaxSheet
 			// 
+			this.pgTaxSheet.Controls.Add(this._ucTaxSheet);
 			this.pgTaxSheet.ItemSize = new System.Drawing.SizeF(64F, 28F);
 			this.pgTaxSheet.Location = new System.Drawing.Point(10, 37);
 			this.pgTaxSheet.Name = "pgTaxSheet";
 			this.pgTaxSheet.Size = new System.Drawing.Size(973, 825);
 			this.pgTaxSheet.Text = "Tax Sheet";
-			// 
-			// splitPanel2
-			// 
-			this.splitPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            //
+            // _ucTaxSheet
+            //
+            this._ucTaxSheet.Location = new System.Drawing.Point(0, 0);
+            this._ucTaxSheet.Name = "_ucTaxSheet";
+            this._ucTaxSheet.Size = new System.Drawing.Size(973, 825);
+            this._ucTaxSheet.TabIndex = 0;
+            // 
+            // splitPanel2
+            // 
+            this.splitPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.splitPanel2.Location = new System.Drawing.Point(893, 0);
 			this.splitPanel2.Name = "splitPanel2";
 			// 
@@ -395,59 +480,5 @@ namespace AbstractMaker.Main
 
 		#endregion
 
-		private RadSplitContainer radSplitContainer;
-
-		private SplitPanel splitPanel1;
-
-		private SplitPanel splitPanel2;
-
-		private RadStatusStrip radStatusStrip1;
-
-		private RadButton btnSaveFormData;
-
-		private RadLabel radLabel1;
-
-		private RadLabel radLabel2;
-
-		private RadLabel radLabel5;
-
-		private RadLabel radLabel6;
-
-		private RadTextBox tbLoanType;
-
-		private RadTextBox tbLoanAmount;
-
-		private RadTextBox tbFullAddress;
-
-		private RadTextBox tbBorrowers;
-
-		private RadPageView radPageView1;
-
-
-		private RadPageViewPage pgMortgagesAndDeeds;
-
-		private RadPageViewPage pgJudgmentLiens;
-
-		private RadPageViewPage pgChainOfTitle;
-
-		private RadPageViewPage pgTaxSheet;
-
-		private RadPageViewPage pgLegalDescription;
-
-		private RadButton rbShowFiles;
-
-		private Legal_Description LEGAL_DESCRIPTION = new Legal_Description()
-		{
-			Text = "",
-			TaxID = "",
-			PB_Legal_Description = true
-		};
-
-		private List<Mortgage> mORTGAGES = new List<Mortgage>();
-
-		private TAX_SHEET TaxSheet = new TAX_SHEET();
-
-		private JUDGMENTLIENS judgmentLiens = new JUDGMENTLIENS();
-		private ucChainOfTitle _ucChainOfTitle;
 	}
 }

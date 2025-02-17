@@ -26,10 +26,10 @@ namespace AbstractMaker.Main
 
     public List<Mortgage> MORTGAGES { get; set; }
 
-    public ucMortgageOrDeed(List<Mortgage> mORTGAGES)
+    public ucMortgageOrDeed()
     {
       this.InitializeComponent();
-      this.MORTGAGES = mORTGAGES;
+      this.MORTGAGES = new List<Mortgage>();
       this.ddlMortgageType.DataSource = (object) new List<string>()
       {
         "Mortgagee",

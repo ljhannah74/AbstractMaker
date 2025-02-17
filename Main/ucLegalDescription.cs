@@ -23,10 +23,10 @@ namespace AbstractMaker.Main
 
     public Legal_Description Legal_Description { get; set; }
 
-    public ucLegalDescription(Legal_Description legal_Description)
+    public ucLegalDescription()
     {
       this.InitializeComponent();
-      this.Legal_Description = legal_Description;
+      this.Legal_Description = new Legal_Description();
       this.UpdateUIToReflectModel();
       this.rtbcLegalDesc.TextChanged += new EventHandler(this.rtbcLegalDesc_TextChanged);
       this.rtbTaxID.TextChanged += new EventHandler(this.rtbTaxID_TextChanged);
@@ -90,7 +90,7 @@ namespace AbstractMaker.Main
       this.Controls.Add((Control) this.radLabel2);
       this.Controls.Add((Control) this.rtbcLegalDesc);
       this.Controls.Add((Control) this.radLabel1);
-      this.Name = nameof (ucLegalDescription);
+      this.Name = "ucLegalDescription";
       this.Size = new System.Drawing.Size(877, 602);
       this.radLabel1.EndInit();
       this.rtbcLegalDesc.EndInit();
