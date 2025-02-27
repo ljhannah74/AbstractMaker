@@ -22,7 +22,7 @@ jobs:
           dotnet-version: '8.0.x'  # Adjust to match your project version
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: nuget restore
 
       - name: Build project
         run: dotnet build --configuration Release --no-restore
