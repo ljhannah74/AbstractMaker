@@ -25,7 +25,7 @@ jobs:
         run: nuget restore
 
       - name: Build project
-        run: dotnet msbuild /p:Platform=x64 /p:Configuration=Release
+        run: dotnet msbuild 
 
       - name: Run tests
         run: dotnet test --configuration Release --no-restore --verbosity normal
