@@ -48,8 +48,7 @@ namespace AbstractMaker.Main
 			this.btnRefreshOrderList = new Button();
 			this.Label4 = new Label();
 			this.cddOrderStatuses = new CheckedListBox();
-			// TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-			this.MasterTemplate = new DataGridView();
+			this.MasterTemplate = new DataGrid();
 			this.dtpStart = new DateTimePicker();
 			this.dtpEnd = new DateTimePicker();
 			this.btnCreateNewOrder = new Button();
@@ -274,8 +273,7 @@ namespace AbstractMaker.Main
 		private CheckedListBox cddOrderStatuses;
 		private DateTimePicker dtpEnd;
 		private DateTimePicker dtpStart;
-		// TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-		private DataGridView MasterTemplate;
+		private DataGrid MasterTemplate;
 		private Button btnCreateNewOrder;
 	}
 }
