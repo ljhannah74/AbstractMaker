@@ -23,6 +23,6 @@ namespace AbstractMaker.Model
 		public string PayeeCity { get; set; }
 		public string PayeeState { get; set; }
 		public string PayeeZip { get; set; }
-		public List<TaxSheetUtilities> TaxSheetUtilities { get; set; } = new List<TaxSheetUtilities>();
+		public List<TaxSheetUtilities> TaxSheetUtilities { get; set; }
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AbstractMaker.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,20 +19,38 @@ namespace AbstractMaker.Main
 		public BuildTitleAbstract()
 		{
 			InitializeComponent();
+		//	InitializeTitleAbstract();
 		}
 
-		private void radPageView1_SelectedPageChanged(object sender, EventArgs e)
+		public BuildTitleAbstract(int titleAbstractID)
 		{
-
-		}
-
-		private void rbShowFiles_Click(object sender, EventArgs e)
+			InitializeComponent();
+			TitleAbstractID = titleAbstractID;
+			InitializeTitleAbstract();
+        }
+		private void InitializeTitleAbstract()
 		{
-		}
+			BusinessAPICalls bac = new BusinessAPICalls();
+			TITLE_ABSTRACT = bac.GetAbstractByID(TitleAbstractID);
+			TITLE_CHAIN = bac.GetDeedsForAbstract(TitleAbstractID);
+			LEGAL_DESCRIPTION = bac.GetAbstractLegalDescription(TitleAbstractID);
+            _ucChainOfTitle.SetDeeds(TITLE_CHAIN);
+			_ucLegalDescription.SetLegalDescription(LEGAL_DESCRIPTION);
+            tbOrderNo.Text = TITLE_ABSTRACT.OrderNo;
+			tbFullAddress.Text = TITLE_ABSTRACT.Property.FullAddress;
+        }
 
-		private void btnSaveFormData_Click(object sender, EventArgs e) { }
+		private void btnSaveFormData_Click(object sender, EventArgs e) 
+		{
+			BusinessAPICalls bac = new BusinessAPICalls();
+            TITLE_CHAIN = _ucChainOfTitle.GetDeeds();
+			LEGAL_DESCRIPTION = _ucLegalDescription.GetLegalDescription();
+			bac.SaveTitleAbstract(TITLE_ABSTRACT);
+			bac.SaveDeedsForAbstract(TITLE_ABSTRACT.TitleAbstractID, TITLE_CHAIN);
+			bac.SaveAbstractLegalDescription(LEGAL_DESCRIPTION, TITLE_ABSTRACT.TitleAbstractID);
+        }
 
-		private void BuildTitleAbstract_Load(object sender, EventArgs e)
+		private void LoadData()
 		{
 
 		}

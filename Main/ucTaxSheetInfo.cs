@@ -73,15 +73,16 @@ namespace AbstractMaker.Main
     public TaxSheetUtilities Utilities { get; set; }
 
     public int UtilityCount { get; set; }
+        public ucTaxSheetInfo() { InitializeComponent(); }
 
     public ucTaxSheetInfo(TaxSheet taxSheet)
     {
       this.InitializeComponent();
       this.TaxSheetModel = taxSheet;
       PolicyType policyType = new PolicyType();
-      this.rddlPaymentTypes.DataSource = (object) this.PaymentTypes;
-      this.rddlFrequency.DataSource = (object) this.FrequencyTypes;
-      this.rddlPayeeState.DataSource = (object) policyType.GetStates();
+      this.rddlPaymentTypes.DataSource =  this.PaymentTypes;
+      this.rddlFrequency.DataSource =  this.FrequencyTypes;
+      this.rddlPayeeState.DataSource =  policyType.GetStates();
       this.UpdateUIToReflectModel();
       this.rtbTaxID.TextChanged += new EventHandler(this.RtbTaxID_TextChanged);
       this.rtbTaxYear.TextChanged += new EventHandler(this.RtbTaxYear_TextChanged);
@@ -156,7 +157,7 @@ namespace AbstractMaker.Main
       this.rtbTaxID.Text = this.TaxSheetModel.TaxID;
       this.rtbTaxYear.Text = this.TaxSheetModel.TaxYear;
       if (!string.IsNullOrWhiteSpace(this.TaxSheetModel.PaymentType))
-        this.rddlPaymentTypes.SelectedValue = (object) this.TaxSheetModel.PaymentType;
+        this.rddlPaymentTypes.SelectedValue = this.TaxSheetModel.PaymentType;
       this.TaxSheetModel.PaymentType = this.rddlPaymentTypes.SelectedValue.ToString();
       if (!string.IsNullOrWhiteSpace(this.TaxSheetModel.Frequency))
         this.rddlFrequency.SelectedText = this.TaxSheetModel.Frequency;
@@ -176,7 +177,7 @@ namespace AbstractMaker.Main
       }
       // ISSUE: variable of a boxed type
       Decimal? local1 = nullable2;
-      mebBaseAmount.Value = (object) local1;
+      mebBaseAmount.Value = local1;
       RadMaskedEditBox delinquentAmount = this.mebDelinquentAmount;
       nullable1 = this.TaxSheetModel.DelinquentAmount;
       Decimal? nullable3;
@@ -192,16 +193,16 @@ namespace AbstractMaker.Main
       }
       // ISSUE: variable of a boxed type
       Decimal? local2 = nullable3;
-      delinquentAmount.Value = (object) local2;
+      delinquentAmount.Value =  local2;
       this.rtbcStatus.Text = this.TaxSheetModel.Status;
       this.rtbPayee.Text = this.TaxSheetModel.Payee;
       if (!string.IsNullOrWhiteSpace(this.TaxSheetModel.PayeePhone))
-        this.mebPayeePhone.Value = (object) this.TaxSheetModel.PayeePhone.Replace("(", "").Replace(")", "");
+        this.mebPayeePhone.Value =  this.TaxSheetModel.PayeePhone.Replace("(", "").Replace(")", "");
       this.rtbPayeeAddress1.Text = this.TaxSheetModel.PayeeAddress1;
       this.rtbPayeeAddress2.Text = this.TaxSheetModel.PayeeAddress2;
       this.rtbPayeeCity.Text = this.TaxSheetModel.PayeeCity;
       if (!string.IsNullOrWhiteSpace(this.TaxSheetModel.PayeeState))
-        this.rddlPayeeState.SelectedValue = (object) this.TaxSheetModel.PayeeState;
+        this.rddlPayeeState.SelectedValue =  this.TaxSheetModel.PayeeState;
       this.TaxSheetModel.PayeeState = this.rddlPayeeState.SelectedValue.ToString();
       this.rtbPayeeZip.Text = this.TaxSheetModel.PayeeZip;
       this.ID.Value = (Decimal) this.TaxSheetModel.ID;

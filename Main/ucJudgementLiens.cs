@@ -46,6 +46,7 @@ namespace AbstractMaker.Main
 
     public JUDGMENTLIENS JudgmentLiensModel { get; set; }
 
+    public ucJudgmentLiens() { InitializeComponent(); }
     public ucJudgmentLiens(JUDGMENTLIENS judgmentLiens)
     {
       this.InitializeComponent();

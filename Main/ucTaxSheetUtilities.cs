@@ -69,6 +69,7 @@ namespace AbstractMaker.Main
       this.rtbUtilityPayeeZip.TextChanged += new EventHandler(this.rtbUtilityPayeeZip_TextChanged);
     }
 
+        public ucTaxSheetUtilities() { InitializeComponent(); }
     private void rddlrddlUtilityFrequency_TextChanged(object sender, EventArgs e) => this.UtilitiestModel.UtilityFrequency = this.rddlUtilityFrequency.Text;
 
     private void rddlUtilityFrequency_SelectedValueChanged(object sender, EventArgs e) => this.UtilitiestModel.UtilityFrequency = this.rddlUtilityFrequency.SelectedValue.ToString();
@@ -309,7 +310,7 @@ namespace AbstractMaker.Main
       this.Controls.Add((Control) this.radLabel6);
       this.Controls.Add((Control) this.rtbUtilityType);
       this.Controls.Add((Control) this.radLabel1);
-      this.Name = nameof (ucTaxSheetUtilities);
+            this.Name = "ucTaxSheetUtilities";
       this.Size = new System.Drawing.Size(419, 273);
       this.rtbUtilityType.EndInit();
       this.radLabel1.EndInit();

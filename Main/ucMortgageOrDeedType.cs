@@ -76,6 +76,7 @@ namespace AbstractMaker.Main
 
     public Assignments Assignments { get; set; }
 
+        public ucMortgageOrDeedType() { InitializeComponent(); }
     public ucMortgageOrDeedType(Mortgage mortgage_Type)
     {
       this.InitializeComponent();
@@ -735,7 +736,7 @@ namespace AbstractMaker.Main
       this.Controls.Add((Control) this.tbLenderName);
       this.Controls.Add((Control) this.radLabel1);
       this.Controls.Add((Control) this.rcbxReleaseRequirment);
-      this.Name = nameof (ucMortgageOrDeedType);
+      this.Name = "ucMortgageOrDeedType";
       this.Size = new System.Drawing.Size(791, 719);
       this.Load += new EventHandler(this.ucMortgageOrDeedType_Load);
       this.rcbxReleaseRequirment.EndInit();

@@ -84,112 +84,13 @@ namespace AbstractMaker.Model
 
         public string Misc { get; set; }
 
-        public List<Assignments> Assignments { get; set; } = new List<Assignments>();
+        public List<Assignments> Assignments { get; set; }
 
         public string Item { get; set; } = "";
 
         public string State { get; set; }
 
         public string County { get; set; }
-
-        public string AssignmentType
-        {
-            get
-            {
-                string str = "Mortgage";
-                if (this.DOTStates.Contains(this.State))
-                    str = "Deed of Trust";
-                if (this.SDStates.Contains(this.State))
-                    str = "Security Deed";
-                return str;
-            }
-        }
-
-        public string BookPageCaseInstrumentLanguage
-        {
-            get
-            {
-                string str = "";
-                if (!string.IsNullOrWhiteSpace(this.Book))
-                    str = str + "Book " + this.Book.Trim();
-                if (!string.IsNullOrWhiteSpace(this.Page))
-                {
-                    if (str.Length > 0)
-                        str += ", ";
-                    str = str + "Page " + this.Page.Trim();
-                }
-                if (!string.IsNullOrWhiteSpace(this.Instrument))
-                {
-                    if (str.Length > 0)
-                        str += ", ";
-                    str = str + "in Instrument " + this.Instrument.Trim();
-                }
-                if (!string.IsNullOrWhiteSpace(this.Document))
-                {
-                    if (str.Length > 0)
-                        str += ", ";
-                    str = str + "Case " + this.Document.Trim();
-                }
-                return str;
-            }
-        }
-
-        public string MortgageReleaseLanguage
-        {
-            get
-            {
-                object[] objArray = new object[9];
-                objArray[0] = (object)this.Mortgagee;
-                objArray[1] = (object)this.Signed_By;
-                DateTime? nullable;
-                DateTime dateTime;
-                string str1;
-                if (!this.Executed.HasValue)
-                {
-                    str1 = "";
-                }
-                else
-                {
-                    nullable = this.Executed;
-                    dateTime = nullable.Value;
-                    str1 = dateTime.ToShortDateString();
-                }
-                objArray[2] = (object)str1;
-                nullable = this.Filed;
-                string str2;
-                if (!nullable.HasValue)
-                {
-                    str2 = "";
-                }
-                else
-                {
-                    nullable = this.Filed;
-                    dateTime = nullable.Value;
-                    str2 = dateTime.ToShortDateString();
-                }
-                objArray[3] = (object)str2;
-                objArray[4] = (object)this.BookPageCaseInstrumentLanguage;
-                objArray[5] = (object)this.County;
-                objArray[6] = (object)this.State;
-                Decimal? mortgageAmount = this.Mortgage_Amount;
-                string str3;
-                if (!mortgageAmount.HasValue)
-                {
-                    str3 = "";
-                }
-                else
-                {
-                    mortgageAmount = this.Mortgage_Amount;
-                    str3 = mortgageAmount.Value.ToString("C");
-                }
-                objArray[7] = (object)str3;
-                objArray[8] = (object)this.AssignmentType;
-                string str4 = string.Format("Payment, cancellation, satisfaction or release of the {8} from {0} to {1}, dated {2} and recorded {3}, {4}, {5} County, {6} Records, in the original principal amount of {7}.", objArray);
-                foreach (Assignments assignment in this.Assignments)
-                    str4 += assignment.AssignmentLanguage;
-                return str4;
-            }
-        }
     }
 }
 

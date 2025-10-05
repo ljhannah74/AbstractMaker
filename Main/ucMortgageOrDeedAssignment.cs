@@ -35,6 +35,13 @@ namespace AbstractMaker.Main
 
     public Assignments Assignment { get; set; }
 
+    public ucMortgageOrDeedAssignment()    
+    {
+            this.Assignment = new Assignments();
+            InitializeComponent();
+            UpdateUIToReflectModel();
+        }
+
     public ucMortgageOrDeedAssignment(Assignments assignment)
     {
       this.InitializeComponent();
@@ -294,7 +301,7 @@ namespace AbstractMaker.Main
       this.Controls.Add((Control) this.radLabel2);
       this.Controls.Add((Control) this.tbAssignee);
       this.Controls.Add((Control) this.lblAssignee);
-      this.Name = nameof (ucMortgageOrDeedAssignment);
+      this.Name = "ucMortgageOrDeedAssignment";
       this.Size = new System.Drawing.Size(498, 197);
       this.ParentChanged += new EventHandler(this.ucMortgageOrDeedAssignment_ParentChanged);
       this.lblAssignee.EndInit();

@@ -15,7 +15,8 @@ using AbstractMaker.Model;
 
 namespace AbstractMaker.Main
 {
-  public class ucMortgageOrDeed : UserControl
+  public class 
+  ucMortgageOrDeed : UserControl
   {
     private IContainer components = (IContainer) null;
     private RadLabel radLabel1;
@@ -23,14 +24,13 @@ namespace AbstractMaker.Main
     private RadPageView pvMortgageDeedType;
     private RadButton rbAddMortgageType;
     private RadButton btnRemoveMortgageType;
-
     public List<Mortgage> MORTGAGES { get; set; }
 
     public ucMortgageOrDeed()
     {
       this.InitializeComponent();
       this.MORTGAGES = new List<Mortgage>();
-      this.ddlMortgageType.DataSource = (object) new List<string>()
+      this.ddlMortgageType.DataSource = new List<string>()
       {
         "Mortgagee",
         "Deed",
@@ -118,65 +118,118 @@ namespace AbstractMaker.Main
 
     private void InitializeComponent()
     {
-      this.radLabel1 = new RadLabel();
-      this.ddlMortgageType = new RadDropDownList();
-      this.pvMortgageDeedType = new RadPageView();
-      this.rbAddMortgageType = new RadButton();
-      this.btnRemoveMortgageType = new RadButton();
-      this.radLabel1.BeginInit();
-      this.ddlMortgageType.BeginInit();
-      this.pvMortgageDeedType.BeginInit();
-      this.rbAddMortgageType.BeginInit();
-      this.btnRemoveMortgageType.BeginInit();
-      this.SuspendLayout();
-      this.radLabel1.Location = new Point(3, 3);
-      this.radLabel1.Name = "radLabel1";
-      this.radLabel1.Size = new System.Drawing.Size(30, 18);
-      this.radLabel1.TabIndex = 0;
-      this.radLabel1.Text = "Type";
-      this.ddlMortgageType.Location = new Point(39, 3);
-      this.ddlMortgageType.Name = "ddlMortgageType";
-      this.ddlMortgageType.Size = new System.Drawing.Size(150, 20);
-      this.ddlMortgageType.TabIndex = 1;
-      this.ddlMortgageType.Text = "ddlMortgageType";
-      this.pvMortgageDeedType.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-      this.pvMortgageDeedType.Location = new Point(3, 30);
-      this.pvMortgageDeedType.Name = "pvMortgageDeedType";
-      this.pvMortgageDeedType.Size = new System.Drawing.Size(1039, 820);
-      this.pvMortgageDeedType.TabIndex = 117;
-      this.pvMortgageDeedType.ViewMode = PageViewMode.NavigationView;
-      this.pvMortgageDeedType.PageIndexChanged += new EventHandler<RadPageViewIndexChangedEventArgs>(this.pvMortgageDeedType_PageIndexChanged);
-      ((RadPageViewNavigationViewElement) this.pvMortgageDeedType.GetChildAt(0)).ExpandedPaneWidth = 220;
-      ((RadPageViewElement) this.pvMortgageDeedType.GetChildAt(0)).ItemDragMode = PageViewItemDragMode.Preview;
-      this.rbAddMortgageType.Location = new Point(195, 0);
-      this.rbAddMortgageType.Name = "rbAddMortgageType";
-      this.rbAddMortgageType.Size = new System.Drawing.Size(110, 24);
-      this.rbAddMortgageType.TabIndex = 118;
-      this.rbAddMortgageType.Text = "Add";
-      this.rbAddMortgageType.Click += new EventHandler(this.rbAddMortgageType_Click);
-      this.btnRemoveMortgageType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-      this.btnRemoveMortgageType.Location = new Point(892, 0);
-      this.btnRemoveMortgageType.Name = "btnRemoveMortgageType";
-      this.btnRemoveMortgageType.Size = new System.Drawing.Size(150, 24);
-      this.btnRemoveMortgageType.TabIndex = 122;
-      this.btnRemoveMortgageType.Text = "Remove Selected";
-      this.btnRemoveMortgageType.Click += new EventHandler(this.btnRemoveMortgageType_Click);
-      this.AutoScaleDimensions = new SizeF(6f, 13f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.Controls.Add((Control) this.btnRemoveMortgageType);
-      this.Controls.Add((Control) this.rbAddMortgageType);
-      this.Controls.Add((Control) this.pvMortgageDeedType);
-      this.Controls.Add((Control) this.ddlMortgageType);
-      this.Controls.Add((Control) this.radLabel1);
-      this.Name = nameof (ucMortgageOrDeed);
-      this.Size = new System.Drawing.Size(1045, 866);
-      this.radLabel1.EndInit();
-      this.ddlMortgageType.EndInit();
-      this.pvMortgageDeedType.EndInit();
-      this.rbAddMortgageType.EndInit();
-      this.btnRemoveMortgageType.EndInit();
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.ddlMortgageType = new Telerik.WinControls.UI.RadDropDownList();
+            this.pvMortgageDeedType = new Telerik.WinControls.UI.RadPageView();
+            this.rbAddMortgageType = new Telerik.WinControls.UI.RadButton();
+            this.btnRemoveMortgageType = new Telerik.WinControls.UI.RadButton();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlMortgageType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvMortgageDeedType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAddMortgageType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveMortgageType)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radLabel1.Location = new System.Drawing.Point(4, 4);
+            this.radLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radLabel1.Name = "radLabel1";
+            // 
+            // 
+            // 
+            this.radLabel1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 125, 22);
+            this.radLabel1.Size = new System.Drawing.Size(40, 22);
+            this.radLabel1.TabIndex = 0;
+            this.radLabel1.Text = "Type";
+            // 
+            // ddlMortgageType
+            // 
+            this.ddlMortgageType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ddlMortgageType.DropDownHeight = 141;
+            this.ddlMortgageType.ItemHeight = 24;
+            this.ddlMortgageType.Location = new System.Drawing.Point(52, 4);
+            this.ddlMortgageType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddlMortgageType.Name = "ddlMortgageType";
+            // 
+            // 
+            // 
+            this.ddlMortgageType.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 156, 25);
+            this.ddlMortgageType.RootElement.StretchVertically = true;
+            this.ddlMortgageType.Size = new System.Drawing.Size(200, 25);
+            this.ddlMortgageType.TabIndex = 1;
+            this.ddlMortgageType.Text = "ddlMortgageType";
+            // 
+            // pvMortgageDeedType
+            // 
+            this.pvMortgageDeedType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pvMortgageDeedType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pvMortgageDeedType.Location = new System.Drawing.Point(4, 37);
+            this.pvMortgageDeedType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pvMortgageDeedType.Name = "pvMortgageDeedType";
+            // 
+            // 
+            // 
+            this.pvMortgageDeedType.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 500, 375);
+            this.pvMortgageDeedType.Size = new System.Drawing.Size(1385, 1009);
+            this.pvMortgageDeedType.TabIndex = 117;
+            this.pvMortgageDeedType.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView;
+            this.pvMortgageDeedType.PageIndexChanged += new System.EventHandler<Telerik.WinControls.UI.RadPageViewIndexChangedEventArgs>(this.pvMortgageDeedType_PageIndexChanged);
+            // 
+            // rbAddMortgageType
+            // 
+            this.rbAddMortgageType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbAddMortgageType.Location = new System.Drawing.Point(260, 0);
+            this.rbAddMortgageType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAddMortgageType.Name = "rbAddMortgageType";
+            // 
+            // 
+            // 
+            this.rbAddMortgageType.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 137, 30);
+            this.rbAddMortgageType.Size = new System.Drawing.Size(147, 30);
+            this.rbAddMortgageType.TabIndex = 118;
+            this.rbAddMortgageType.Text = "Add";
+            this.rbAddMortgageType.Click += new System.EventHandler(this.rbAddMortgageType_Click);
+            // 
+            // btnRemoveMortgageType
+            // 
+            this.btnRemoveMortgageType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveMortgageType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRemoveMortgageType.Location = new System.Drawing.Point(1189, 0);
+            this.btnRemoveMortgageType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveMortgageType.Name = "btnRemoveMortgageType";
+            // 
+            // 
+            // 
+            this.btnRemoveMortgageType.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 137, 30);
+            this.btnRemoveMortgageType.Size = new System.Drawing.Size(200, 30);
+            this.btnRemoveMortgageType.TabIndex = 122;
+            this.btnRemoveMortgageType.Text = "Remove Selected";
+            this.btnRemoveMortgageType.Click += new System.EventHandler(this.btnRemoveMortgageType_Click);
+            // 
+            // ucMortgageOrDeed
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRemoveMortgageType);
+            this.Controls.Add(this.rbAddMortgageType);
+            this.Controls.Add(this.pvMortgageDeedType);
+            this.Controls.Add(this.ddlMortgageType);
+            this.Controls.Add(this.radLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "ucMortgageOrDeed";
+            this.Size = new System.Drawing.Size(1393, 1066);
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlMortgageType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pvMortgageDeedType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rbAddMortgageType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveMortgageType)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
     }
   }
 }

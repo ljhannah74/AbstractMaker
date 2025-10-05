@@ -24,6 +24,7 @@ namespace AbstractMaker.Main
     private RadButton btnRemoveTaxSheet;
 
     public TAX_SHEET TaxSheetModel { get; set; }
+        public ucTaxSheet() { InitializeComponent(); }
 
     public ucTaxSheet(TAX_SHEET taxSheet)
     {
@@ -139,7 +140,7 @@ namespace AbstractMaker.Main
       this.Controls.Add((Control) this.pgTaxSheets);
       this.Controls.Add((Control) this.rtbBorrowerOwner);
       this.Controls.Add((Control) this.radLabel1);
-      this.Name = nameof (ucTaxSheet);
+      this.Name = "ucTaxSheet";
       this.Size = new System.Drawing.Size(957, 659);
       this.radLabel1.EndInit();
       this.rtbBorrowerOwner.EndInit();

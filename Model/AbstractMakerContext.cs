@@ -18,5 +18,9 @@ namespace AbstractMaker.Model
 		public DbSet<Property> Properties { get; set; }
 		public DbSet<ProductType> ProductTypes { get; set; }
 		public DbSet<Client> Clients { get; set; }
-	}
+		public DbSet<Deed> Deeds { get; set; }
+		public DbSet<Legal_Description> Legal_Descriptions { get; set;
+		
+		}
+    }
 }

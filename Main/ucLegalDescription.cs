@@ -32,14 +32,32 @@ namespace AbstractMaker.Main
       this.rtbTaxID.TextChanged += new EventHandler(this.rtbTaxID_TextChanged);
     }
 
-    private void rtbcLegalDesc_TextChanged(object sender, EventArgs e) => this.Legal_Description.Text = this.rtbcLegalDesc.Text;
+    public void SetLegalDescription(Legal_Description legal_Description)
+    {
+            if (legal_Description != null)
+            {
+                this.Legal_Description = legal_Description;
+            }
+            else
+            {
+                this.Legal_Description = new Legal_Description();
+            }
+            this.UpdateUIToReflectModel();
+     }
+
+        public Legal_Description GetLegalDescription() => this.Legal_Description;
+        private void rtbcLegalDesc_TextChanged(object sender, EventArgs e) => this.Legal_Description.Text = this.rtbcLegalDesc.Text;
 
     private void rtbTaxID_TextChanged(object sender, EventArgs e) => this.Legal_Description.TaxID = this.rtbTaxID.Text;
 
     private void UpdateUIToReflectModel()
     {
-      this.rtbcLegalDesc.Text = this.Legal_Description.Text;
-      this.rtbTaxID.Text = this.Legal_Description.TaxID;
+        if(Legal_Description != null)
+            {
+                this.rtbcLegalDesc.Text = this.Legal_Description?.Text;
+                this.rtbTaxID.Text = this.Legal_Description?.TaxID;
+            }
+
     }
 
     protected override void Dispose(bool disposing)

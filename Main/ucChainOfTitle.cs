@@ -93,5 +93,16 @@ namespace AbstractMaker.Main
 			}
 			this.ReindexGrantees();
 		}
-	}
+
+		public void SetDeeds(List<Deed> deeds)
+		{
+			this.Title_Chain = deeds;
+			UpdateUIToReflectModel();
+        }
+
+		public List<Deed> GetDeeds()
+		{
+			return this.Title_Chain;
+		}
+    }
 }
